@@ -1,0 +1,12 @@
+{% extends 'customer_accounts/base.html' %}
+{% load static %}
+{% block content %}
+  <h2>Welcome to Our Gas Utility App!</h2>
+  <p>This is the home page of our app.</p>
+
+  <ul>
+    <li><a href="{% url 'account_info' %}">Account Information</a></li>
+    <li><a href="{% url 'submit_service_request' %}">Submit Service Request</a></li>
+    <li><a href="{% url 'request_tracking' %}">Request Tracking</a></li>
+  </ul>     
+{% endblock %}

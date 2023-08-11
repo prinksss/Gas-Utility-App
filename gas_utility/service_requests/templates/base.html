@@ -1,0 +1,30 @@
+{% load static %}
+\<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'service_requests/style.css' %}">
+    <title>Gas Utility App</title>
+</head>
+<body>
+    <header>
+        <h1>Gas Utility App</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'submit_service_request' %}">Submit Service Request</a></li>
+                <li><a href="{% url 'request_tracking' %}">Request Tracking</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        &copy; {{ year }} Gas Utility App
+    </footer>
+</body>
+</html>
